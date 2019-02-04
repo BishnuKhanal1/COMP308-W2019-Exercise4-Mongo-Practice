@@ -8,14 +8,13 @@
       <%= title %>
     </h1>
     <br />
-
+    <!--Header row-->
     <table class="table table-boardered table-striped table-hover">
-      <!--Table  Header Row-->
       <tr>
         <th class="text-center">Name</th>
         <th class="text-center">Description</th>
       </tr>
-      <!--Repeatable Template Row-->
+      <!--Repeatable Template row-->
       <% for(let count = 0; count < favoriteList.length; count++) {%>
       <tr>
         <td class="text-center"><%= favoriteList[count].name %></td>
@@ -23,7 +22,6 @@
       </tr>
       <%}%>
     </table>
-
   </div>
 </div>
 
