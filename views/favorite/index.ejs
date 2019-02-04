@@ -1,6 +1,30 @@
 <% include ../partials/header.ejs %>
 
 <!--Contents of favorite definitions embed here -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-offsetr-3 col-md-6"></div>
+    <h1>
+      <%= title %>
+    </h1>
+    <br />
 
-<% include ../partials/header.ejs %>
+    <table class="table table-boardered table-striped table-hover">
+      <!--Table  Header Row-->
+      <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Description</th>
+      </tr>
+      <!--Repeatable Template Row-->
+      <% for(let count = 0; count < favoriteList.length; count++) {%>
+      <tr>
+        <td class="text-center"><%= favoriteList[count].name %></td>
+        <td class="text-center"><%= favoriteList[count].description %></td>
+      </tr>
+      <%}%>
+    </table>
 
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
